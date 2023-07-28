@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/locationgps/static/css/main.073c9b0a.css",
+    "main.js": "/locationgps/static/js/main.b03d6ed7.js",
+    "static/js/787.fb0e4b61.chunk.js": "/locationgps/static/js/787.fb0e4b61.chunk.js",
+    "static/media/logo.svg": "/locationgps/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/locationgps/index.html",
+    "main.073c9b0a.css.map": "/locationgps/static/css/main.073c9b0a.css.map",
+    "main.b03d6ed7.js.map": "/locationgps/static/js/main.b03d6ed7.js.map",
+    "787.fb0e4b61.chunk.js.map": "/locationgps/static/js/787.fb0e4b61.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.b03d6ed7.js"
+  ]
+}
