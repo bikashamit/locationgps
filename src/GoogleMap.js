@@ -12,5 +12,5 @@ const GoogleMap = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDbChqbJempQ4iskWL3LYSK-DRlFFB0DlQ', // Replace with your actual API key
+  apiKey: 'AIzaSyCerUCTYhn2CEPO9LO8G0o7d-7QtONnzSI', // Replace with your actual API key
 })(GoogleMap);
