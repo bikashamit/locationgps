@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import GoogleMap from './GoogleMap'
 function App() {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
@@ -32,6 +32,12 @@ function App() {
           <p>Longitude: {longitude}</p>
         </div>
       )}
+      <div>
+      <h1>your location in map</h1>
+      {latitude !== null && longitude !== null && (
+      <GoogleMap latitude={latitude} longitude={longitude} />
+      )}
+    </div>
     </div>
   );
 }
