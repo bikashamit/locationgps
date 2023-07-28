@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+
+  const handleGetLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          setLatitude(lat);
+          setLongitude(lon);
+        },
+        (error) => {
+          console.error('Error getting location:', error.message);
+        }
+      );
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>GPS App</h1>
+      <button onClick={handleGetLocation}>Get GPS Location</button>
+      {latitude !== null && longitude !== null && (
+        <div>
+          <p>Latitude: {latitude}</p>
+          <p>Longitude: {longitude}</p>
+        </div>
+      )}
     </div>
   );
 }
